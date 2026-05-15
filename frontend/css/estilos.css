@@ -1,0 +1,251 @@
+/* RESET */
+:root {
+  --rosa: #ff4da6;
+  --rosa-oscuro: #e60073;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#carrito {
+  background: white;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+}
+/* MODAL */
+
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal-contenido{
+  background:white;
+  width:90%;
+  max-width:500px;
+  padding:20px;
+  border-radius:15px;
+  position:relative;
+}
+
+.cerrar{
+  position:absolute;
+  right:15px;
+  top:10px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* GENERAL */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+  background: #d677cb;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO (PORTADA) */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../img/portada1.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* CAPA OSCURA */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+
+/* TEXTO SOBRE PORTADA */
+.hero h2,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BOTÓN */
+.btn {
+  background: rgb(255, 0, 153);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: rgb(255, 0, 136);
+}
+
+/* CONTENEDOR LOGIN / REGISTRO */
+.container {
+  width: 320px;
+  margin: auto;
+  margin-top: 100px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BOTONES */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #d677cb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d677cb;
+}
+
+/* TITULO */
+.titulo {
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+}
+
+/* GRID PRODUCTOS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD PRODUCTO */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGEN PRODUCTO */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TEXTO */
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 18px;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
