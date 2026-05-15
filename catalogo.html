@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<input type="text" id="busqueda" placeholder="Buscar producto">
+<button onclick="buscarProducto()">Buscar</button>
+
+<input type="number" id="precioMin" placeholder="Precio mínimo">
+<input type="number" id="precioMax" placeholder="Precio máximo">
+<button onclick="filtrarPorPrecio()">Filtrar</button>
+
+<button onclick="cargarProductos()">Limpiar</button>
+<body onload="cargarProductos()">
+
+<button onclick="logout()">Cerrar sesión</button>
+
+<h1 class="titulo">Catálogo</h1>
+
+<div class="grid" id="productos"></div>
+
+<h2>Tu cotización</h2>
+<div id="carrito"></div>
+
+<button onclick="enviarWhatsApp()">Enviar cotización</button>
+
+<script src="js/app.js"></script>
+<script>
+  verificarSesion();
+</script>
+<div id="productos"></div>
+<div id="modalProducto" class="modal">
+
+  <div class="modal-contenido">
+
+    <span class="cerrar" onclick="cerrarModal()">
+      &times;
+    </span>
+
+    <div id="detalleProducto"></div>
+
+  </div>
+
+</div>
+
+<select id="categoria">
+  <option value="">Todas</option>
+  <option value="camas">Camas</option>
+  <option value="mesas">Mesas</option>
+  <option value="sillas">Sillas</option>
+  <option value="escritorios">Escritorios</option>
+</select>
+
+<button onclick="filtrarCategoria()">
+  Filtrar categoría
+</button>
+
+<h2>Tu cotización</h2>
+<div id="carrito"></div>
+</body>
+</html>

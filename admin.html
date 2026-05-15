@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<input type="file" id="imagen" accept="image/*">
+<body onload="mostrarAdmin()">
+<p id="mensaje" style="color:pink;"></p>
+<h1>Panel Admin</h1>
+
+<input type="text" id="nombre" placeholder="Nombre">
+<input type="number" id="precio" placeholder="Precio">
+<input type="number" id="stock" placeholder="Stock">
+<input type="text" id="imagen" placeholder="img/camas/camas1.png">
+
+<button onclick="agregarProducto()">Agregar</button>
+
+<h2>Productos</h2>
+<div id="listaAdmin"></div>
+
+<script src="js/app.js"></script>
+<script>
+  verificarAdmin();
+</script>
+
+<h2>Clientes registrados</h2>
+<div id="listaClientes"></div>
+
+<h2>Cotizaciones realizadas</h2>
+<div id="listaCotizaciones"></div>
+
+<h2>Registrar administrador</h2>
+
+<input type="text" id="nuevoAdminNombre" placeholder="Nombre">
+<input type="email" id="nuevoAdminCorreo" placeholder="Correo">
+<input type="text" id="nuevoAdminTelefono" placeholder="Teléfono">
+<input type="password" id="nuevoAdminPassword" placeholder="Contraseña">
+
+<button onclick="registrarAdmin()">
+  Crear administrador
+</button>
+
+<script>
+  verificarAdmin();
+  mostrarAdmin();
+  mostrarClientes();
+  mostrarCotizaciones();
+</script>
+
+</body>
+</html>
